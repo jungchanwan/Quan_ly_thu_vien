@@ -41,5 +41,10 @@ C:\Users\DAT\Desktop\TestThuVien\TestThuVien_copy_24_03_2017\TestThuVien\obj\x86
 C:\Users\DAT\Desktop\TestThuVien\TestThuVien_copy_24_03_2017\TestThuVien\obj\x86\Debug\TestThuVien.GiaoDien.Frm_QLTra.resources
 C:\Users\DAT\Desktop\TestThuVien\TestThuVien_copy_24_03_2017\TestThuVien\obj\x86\Debug\TestThuVien.Properties.Resources.resources
 C:\Users\DAT\Desktop\TestThuVien\TestThuVien_copy_24_03_2017\TestThuVien\obj\x86\Debug\TestThuVien.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\Khatmau_sr\Desktop\thuvien\Quan_ly_thu_vien\TestThuVien\TestThuVien\obj\x86\Debug\TestThuVien.exe
 C:\Users\Khatmau_sr\Desktop\thuvien\Quan_ly_thu_vien\TestThuVien\TestThuVien\obj\x86\Debug\TestThuVien.pdb
+=======
+C:\Users\DAT\Desktop\Hoai_Dat_Long\Quan_ly_thu_vien\TestThuVien\TestThuVien\obj\x86\Debug\TestThuVien.exe
+C:\Users\DAT\Desktop\Hoai_Dat_Long\Quan_ly_thu_vien\TestThuVien\TestThuVien\obj\x86\Debug\TestThuVien.pdb
+>>>>>>> origin/master
