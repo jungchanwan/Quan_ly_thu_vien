@@ -20,7 +20,10 @@ namespace TestThuVien.QLThuVienDTO
         }
         public void XoaDuLieu(HoiVien et)
         {
-            cn.ThucThiCauLenhSQL(@"DELETE  from  HOIVIEN where MaHoiVien='" + et.Mahoivien + "'");
+            
+            cn.ThucThiCauLenhSQL(@"delete CHITIECMUONSACH where MaHoiVien='" + et.Mahoivien + "' and  SoLuongMuon=0");
+            cn.ThucThiCauLenhSQL(@"delete CHITIECTRASACH where MaHoiVien='" + et.Mahoivien + "' and  SoLuongTra=(select SoLuongMuon from CHITIECMUONSACH where MaHoiVien='" + et.Mahoivien+"'");
+            cn.ThucThiCauLenhSQL(@"delete HOIVIEN where MaHoiVien='"+et.Mahoivien+"'");
         }
         public DataTable LayDuLieu(string DieuKien)
         {
