@@ -317,6 +317,7 @@
             this.dataGridView_Sach.Size = new System.Drawing.Size(848, 139);
             this.dataGridView_Sach.TabIndex = 28;
             this.dataGridView_Sach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Sach_CellClick);
+            this.dataGridView_Sach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Sach_CellContentClick);
             // 
             // Column1
             // 

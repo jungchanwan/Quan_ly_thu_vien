@@ -41,7 +41,7 @@
             this.txt_SoLuong = new System.Windows.Forms.TextBox();
             this.but_Sua = new System.Windows.Forms.Button();
             this.but_Xoa = new System.Windows.Forms.Button();
-            this.but_Luu = new System.Windows.Forms.Button();
+            this.butluu = new System.Windows.Forms.Button();
             this.txt_NgayMuon = new System.Windows.Forms.TextBox();
             this.txt_NgayHenTra = new System.Windows.Forms.TextBox();
             this.dataGridView_QLMuonSach = new System.Windows.Forms.DataGridView();
@@ -52,12 +52,11 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_MaHoiVien = new System.Windows.Forms.TextBox();
             this.txt_TenHoiVien = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.but_kiemtratinhtrang = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_QLMuonSach)).BeginInit();
@@ -159,14 +158,16 @@
             this.txt_MaSach.Name = "txt_MaSach";
             this.txt_MaSach.Size = new System.Drawing.Size(235, 26);
             this.txt_MaSach.TabIndex = 16;
+            this.txt_MaSach.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MaSach_KeyDown);
             // 
             // txt_TenSach
             // 
             this.txt_TenSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_TenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_TenSach.Location = new System.Drawing.Point(114, 172);
+            this.txt_TenSach.Location = new System.Drawing.Point(112, 163);
+            this.txt_TenSach.Multiline = true;
             this.txt_TenSach.Name = "txt_TenSach";
-            this.txt_TenSach.Size = new System.Drawing.Size(235, 26);
+            this.txt_TenSach.Size = new System.Drawing.Size(235, 52);
             this.txt_TenSach.TabIndex = 17;
             // 
             // txt_SoLuong
@@ -210,21 +211,22 @@
             this.but_Xoa.Text = "Xóa";
             this.but_Xoa.UseVisualStyleBackColor = false;
             // 
-            // but_Luu
+            // butluu
             // 
-            this.but_Luu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.but_Luu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.but_Luu.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.but_Luu.FlatAppearance.BorderSize = 0;
-            this.but_Luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.but_Luu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.but_Luu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.but_Luu.Location = new System.Drawing.Point(103, 286);
-            this.but_Luu.Name = "but_Luu";
-            this.but_Luu.Size = new System.Drawing.Size(73, 35);
-            this.but_Luu.TabIndex = 26;
-            this.but_Luu.Text = "Lưu";
-            this.but_Luu.UseVisualStyleBackColor = false;
+            this.butluu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.butluu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.butluu.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butluu.FlatAppearance.BorderSize = 0;
+            this.butluu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butluu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.butluu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.butluu.Location = new System.Drawing.Point(103, 286);
+            this.butluu.Name = "butluu";
+            this.butluu.Size = new System.Drawing.Size(73, 35);
+            this.butluu.TabIndex = 26;
+            this.butluu.Text = "Lưu";
+            this.butluu.UseVisualStyleBackColor = false;
+            this.butluu.Click += new System.EventHandler(this.butluu_Click);
             // 
             // txt_NgayMuon
             // 
@@ -325,22 +327,6 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(21, 286);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 35);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -381,21 +367,22 @@
             this.txt_TenHoiVien.Size = new System.Drawing.Size(200, 26);
             this.txt_TenHoiVien.TabIndex = 49;
             // 
-            // button2
+            // but_kiemtratinhtrang
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(114, 221);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(235, 35);
-            this.button2.TabIndex = 50;
-            this.button2.Text = "Kiểm Tra Tình Trạng";
-            this.button2.UseVisualStyleBackColor = false;
+            this.but_kiemtratinhtrang.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.but_kiemtratinhtrang.BackColor = System.Drawing.Color.DodgerBlue;
+            this.but_kiemtratinhtrang.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.but_kiemtratinhtrang.FlatAppearance.BorderSize = 0;
+            this.but_kiemtratinhtrang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_kiemtratinhtrang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.but_kiemtratinhtrang.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.but_kiemtratinhtrang.Location = new System.Drawing.Point(114, 227);
+            this.but_kiemtratinhtrang.Name = "but_kiemtratinhtrang";
+            this.but_kiemtratinhtrang.Size = new System.Drawing.Size(235, 35);
+            this.but_kiemtratinhtrang.TabIndex = 50;
+            this.but_kiemtratinhtrang.Text = "Kiểm Tra Tình Trạng";
+            this.but_kiemtratinhtrang.UseVisualStyleBackColor = false;
+            this.but_kiemtratinhtrang.Click += new System.EventHandler(this.but_kiemtratinhtrang_Click);
             // 
             // Frm_QLMuon
             // 
@@ -403,20 +390,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(786, 567);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.but_kiemtratinhtrang);
             this.Controls.Add(this.txt_TenHoiVien);
+            this.Controls.Add(this.txt_TenSach);
             this.Controls.Add(this.txt_MaHoiVien);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView_QLMuonSach);
             this.Controls.Add(this.txt_NgayHenTra);
             this.Controls.Add(this.txt_NgayMuon);
             this.Controls.Add(this.but_Sua);
             this.Controls.Add(this.but_Xoa);
-            this.Controls.Add(this.but_Luu);
+            this.Controls.Add(this.butluu);
             this.Controls.Add(this.txt_SoLuong);
-            this.Controls.Add(this.txt_TenSach);
             this.Controls.Add(this.txt_MaSach);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -453,11 +439,10 @@
         private System.Windows.Forms.TextBox txt_SoLuong;
         private System.Windows.Forms.Button but_Sua;
         private System.Windows.Forms.Button but_Xoa;
-        private System.Windows.Forms.Button but_Luu;
+        private System.Windows.Forms.Button butluu;
         private System.Windows.Forms.TextBox txt_NgayMuon;
         private System.Windows.Forms.TextBox txt_NgayHenTra;
         private System.Windows.Forms.DataGridView dataGridView_QLMuonSach;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_MaHoiVien;
@@ -469,6 +454,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button but_kiemtratinhtrang;
     }
 }

@@ -18,13 +18,13 @@ namespace TestThuVien.QLThuVienBus
         {
             sql.SuaDuLieu(et);
         }
-        public void XoaDuLieu(HoiVien et)
-        {
-            sql.XoaDuLieu(et);
-        }
         public DataTable LayDuLieu(string DieuKien)
         {
             return sql.LayDuLieu(DieuKien);
+        }
+        public DataTable LayDuLieuBang(string CauLenh)
+        {
+            return sql.LayDuLieuBang(CauLenh);
         }
        
     }

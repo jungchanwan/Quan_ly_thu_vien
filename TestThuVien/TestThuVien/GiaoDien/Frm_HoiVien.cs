@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using TestThuVien.HeThong;
 using TestThuVien.QLThuVienBus;
+using TestThuVien.QLThuVienDTO;
+using System.Data.SqlClient;
 namespace TestThuVien.GiaoDien
 {
     public partial class Frm_HoiVien : Form
@@ -19,6 +21,7 @@ namespace TestThuVien.GiaoDien
         BUSS_HoiVien bus = new BUSS_HoiVien();
         HoiVien ec = new HoiVien();
         bool themmoi;
+        KetNoiDT dt = new KetNoiDT();
         void KhoaDieuKien()
         {
             txtmahoivien.Enabled = false;
@@ -31,9 +34,8 @@ namespace TestThuVien.GiaoDien
 
             btnthemmoi.Enabled = true;
             btnluu.Enabled = false;
-            buttomsua.Enabled = true;
-            btnthoat.Enabled = true;
-            btnxoa.Enabled = true;
+            buttomsua.Enabled = false;
+            btnxoa.Enabled = false;
         }
         void MoDieuKien()
         {
@@ -49,8 +51,6 @@ namespace TestThuVien.GiaoDien
             btnluu.Enabled = true;
             buttomsua.Enabled = false;
             btnxoa.Enabled = false;
-            btnthoat.Enabled = true;
-
         }
         private void Frm_HoiVien_Load(object sender, EventArgs e)
         {
@@ -60,8 +60,16 @@ namespace TestThuVien.GiaoDien
 
         private void btnthemmoi_Click(object sender, EventArgs e)
         {
+            DataTable datams = new DataTable();
+            datams = bus.LayDuLieuBang("select mahoivien from hoivien");
+            string macuoicung = datams.Rows[datams.Rows.Count - 1]["MaHoiVien"].ToString();
+            int n = int.Parse(macuoicung.Substring(3));
+            n++;
+            string mahoivien = "MHV" + string.Format("{0:000000}",n);
+            txtmahoivien.Text = mahoivien;
+            btnxoa.Enabled = false;
             MoDieuKien();
-            SetNull();
+            txtmahoivien.Enabled = false;
             themmoi = true;
         }
         void SetNull()
@@ -90,22 +98,29 @@ namespace TestThuVien.GiaoDien
         {
             try
             {
-                ec.Mahoivien = txtmahoivien.Text;
-                bus.XoaDuLieu(ec);
+                SqlParameter para1 = new SqlParameter("@mahoivien",txtmahoivien.Text);
+                DataTable dulieu= dt.sqlLayDuLieu("tontai",para1);
+                if(dulieu.Rows.Count>=1)
+                {
+                    MessageBox.Show("Người này đang mượn sách không thể xóa");
+                    return;
+                }
+                SqlParameter para2 = new SqlParameter("@mahoivien",txtmahoivien.Text);
+                dt.sqlThucThi("sp_XoaHoiVien", para2);
                 MessageBox.Show("Đã xóa thành công");
                 KhoaDieuKien();
                 SetNull();
                 HienThi("");
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Lỗi Không thể xóa");
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnluu_Click(object sender, EventArgs e)
         {
-            if (txtmahoivien.Text == "" || txtdiachi.Text == "" || txtho.Text == "" || txtten.Text == "")
+            if (txtmahoivien.Text == "" || comboxgioitinh.Text=="" || txtdiachi.Text == "" || txtho.Text == "" || txtten.Text == "")
             {
                 MessageBox.Show("Chưa nhập đủ thông tin");
                 return;
@@ -114,14 +129,23 @@ namespace TestThuVien.GiaoDien
             {
                 try
                 {
-                    ec.Mahoivien = txtmahoivien.Text;
-                    ec.Gioitinh = comboxgioitinh.Text;
-                    ec.Diachi = txtdiachi.Text;
-                    ec.Ho = txtho.Text;
-                    ec.Ten = txtten.Text;
-                    ec.Sodt = txtsodienthoai.Text;
-                    ec.Email = txtemail.Text;
-                    bus.ThemDuLieu(ec);
+                    SqlParameter para1 = new SqlParameter("@mahoivien",txtmahoivien.Text);
+                    SqlParameter para2 = new SqlParameter("@diachi",txtdiachi.Text);
+                    SqlParameter para3 = new SqlParameter("@gioitinh",comboxgioitinh.Text);
+                    SqlParameter para4 = new SqlParameter("@HO", txtho.Text);
+                    SqlParameter para5 = new SqlParameter("@ten", txtten.Text);
+                    SqlParameter para6 = new SqlParameter("@sodt", txtsodienthoai.Text);
+                    SqlParameter para7 = new SqlParameter("@email", txtemail.Text);
+                    dt.sqlThucThi("sp_HoiVienInsert", para1, para2, para3, para4, para5, para6, para7);
+                    HienThi("");
+                    //ec.Mahoivien = txtmahoivien.Text;
+                    //ec.Gioitinh = comboxgioitinh.Text;
+                    //ec.Diachi = txtdiachi.Text;
+                    //ec.Ho = txtho.Text;
+                    //ec.Ten = txtten.Text;
+                    //ec.Sodt = txtsodienthoai.Text;
+                    //ec.Email = txtemail.Text;
+                    //bus.ThemDuLieu(ec);
                     MessageBox.Show("Đã thêm dữ liệu thành công");
                 }
                 catch
@@ -134,14 +158,23 @@ namespace TestThuVien.GiaoDien
             {
                 try
                 {
-                    ec.Mahoivien = txtmahoivien.Text;
-                    ec.Gioitinh = comboxgioitinh.Text;
-                    ec.Diachi = txtdiachi.Text;
-                    ec.Ho = txtho.Text;
-                    ec.Ten = txtten.Text;
-                    ec.Sodt = txtsodienthoai.Text;
-                    ec.Email = txtemail.Text;
-                    bus.SuaDuLieu(ec);
+                    SqlParameter para1 = new SqlParameter("@mahoivien", txtmahoivien.Text);
+                    SqlParameter para2 = new SqlParameter("@diachi", txtdiachi.Text);
+                    SqlParameter para3 = new SqlParameter("@gioitinh", comboxgioitinh.Text);
+                    SqlParameter para4 = new SqlParameter("@HO", txtho.Text);
+                    SqlParameter para5 = new SqlParameter("@ten", txtten.Text);
+                    SqlParameter para6 = new SqlParameter("@sodt", txtsodienthoai.Text);
+                    SqlParameter para7 = new SqlParameter("@email", txtemail.Text);
+                    dt.sqlThucThi("sp_SuaHoiVien", para1, para2, para3, para4, para5, para6, para7);
+                    HienThi("");
+                    //ec.Mahoivien = txtmahoivien.Text;
+                    //ec.Gioitinh = comboxgioitinh.Text;
+                    //ec.Diachi = txtdiachi.Text;
+                    //ec.Ho = txtho.Text;
+                    //ec.Ten = txtten.Text;
+                    //ec.Sodt = txtsodienthoai.Text;
+                    //ec.Email = txtemail.Text;
+                    //bus.SuaDuLieu(ec);
                     MessageBox.Show("Đã sửa dữ liệu thành công");
                  
                 }
@@ -168,6 +201,10 @@ namespace TestThuVien.GiaoDien
                 txtten.Text = dataGiVHoiVien.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtsodienthoai.Text = dataGiVHoiVien.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtemail.Text = dataGiVHoiVien.Rows[e.RowIndex].Cells[6].Value.ToString();
+                btnxoa.Enabled = true;
+                buttomsua.Enabled = true;
+                
+              
             }
             catch
             {

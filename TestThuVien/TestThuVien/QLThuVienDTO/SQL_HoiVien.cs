@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using TestThuVien.HeThong;
 using System.Data;
+using System.Data.SqlClient;
 namespace TestThuVien.QLThuVienDTO
 {
     public class SQL_HoiVien
@@ -18,13 +19,6 @@ namespace TestThuVien.QLThuVienDTO
         {
             cn.ThucThiCauLenhSQL(@"UPDATE    HOIVIEN SET   DiaChi =N'" + et.Diachi + "',GioiTinh=N'" + et.Gioitinh + "', Ho =N'" + et.Ho + "', Ten =N'" + et.Ten + "' where MaHoiVien='" + et.Mahoivien + "'");
         }
-        public void XoaDuLieu(HoiVien et)
-        {
-            
-            cn.ThucThiCauLenhSQL(@"delete CHITIECMUONSACH where MaHoiVien='" + et.Mahoivien + "' and  SoLuongMuon=0");
-            cn.ThucThiCauLenhSQL(@"delete CHITIECTRASACH where MaHoiVien='" + et.Mahoivien + "' and  SoLuongTra=(select SoLuongMuon from CHITIECMUONSACH where MaHoiVien='" + et.Mahoivien+"'");
-            cn.ThucThiCauLenhSQL(@"delete HOIVIEN where MaHoiVien='"+et.Mahoivien+"'");
-        }
         public DataTable LayDuLieu(string DieuKien)
         {
             return cn.GetDataTable("Select * from HOIVIEN " + DieuKien);
@@ -32,6 +26,10 @@ namespace TestThuVien.QLThuVienDTO
         public DataTable LayThongTinHoiVien(string DieuKien)
         {
             return cn.GetDataTable("Select MaHoiVien from HOIVIEN " + DieuKien);
+        }
+        public DataTable LayDuLieuBang(string CauLenh)
+        {
+            return cn.GetDataTable2(CauLenh);
         }
 
     }

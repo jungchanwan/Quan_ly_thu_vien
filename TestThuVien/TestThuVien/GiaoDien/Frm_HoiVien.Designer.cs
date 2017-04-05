@@ -33,7 +33,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.buttomsua = new System.Windows.Forms.Button();
-            this.btnthoat = new System.Windows.Forms.Button();
             this.btnxoa = new System.Windows.Forms.Button();
             this.btnluu = new System.Windows.Forms.Button();
             this.btnthemmoi = new System.Windows.Forms.Button();
@@ -70,7 +69,6 @@
             this.btnsua.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnsua.Controls.Add(this.panel1);
             this.btnsua.Controls.Add(this.buttomsua);
-            this.btnsua.Controls.Add(this.btnthoat);
             this.btnsua.Controls.Add(this.btnxoa);
             this.btnsua.Controls.Add(this.btnluu);
             this.btnsua.Controls.Add(this.btnthemmoi);
@@ -136,29 +134,13 @@
             this.buttomsua.FlatAppearance.BorderSize = 0;
             this.buttomsua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttomsua.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttomsua.Location = new System.Drawing.Point(335, 300);
+            this.buttomsua.Location = new System.Drawing.Point(392, 299);
             this.buttomsua.Name = "buttomsua";
             this.buttomsua.Size = new System.Drawing.Size(96, 35);
             this.buttomsua.TabIndex = 20;
             this.buttomsua.Text = "Sửa";
             this.buttomsua.UseVisualStyleBackColor = false;
             this.buttomsua.Click += new System.EventHandler(this.buttomsua_Click);
-            // 
-            // btnthoat
-            // 
-            this.btnthoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnthoat.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnthoat.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.btnthoat.FlatAppearance.BorderSize = 0;
-            this.btnthoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnthoat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnthoat.Location = new System.Drawing.Point(648, 300);
-            this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(94, 34);
-            this.btnthoat.TabIndex = 19;
-            this.btnthoat.Text = "Thoát";
-            this.btnthoat.UseVisualStyleBackColor = false;
-            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // btnxoa
             // 
@@ -168,7 +150,7 @@
             this.btnxoa.FlatAppearance.BorderSize = 0;
             this.btnxoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnxoa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnxoa.Location = new System.Drawing.Point(490, 302);
+            this.btnxoa.Location = new System.Drawing.Point(595, 301);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(107, 31);
             this.btnxoa.TabIndex = 18;
@@ -184,7 +166,7 @@
             this.btnluu.FlatAppearance.BorderSize = 0;
             this.btnluu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnluu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnluu.Location = new System.Drawing.Point(171, 299);
+            this.btnluu.Location = new System.Drawing.Point(215, 297);
             this.btnluu.Name = "btnluu";
             this.btnluu.Size = new System.Drawing.Size(107, 35);
             this.btnluu.TabIndex = 16;
@@ -200,7 +182,7 @@
             this.btnthemmoi.FlatAppearance.BorderSize = 0;
             this.btnthemmoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnthemmoi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnthemmoi.Location = new System.Drawing.Point(22, 299);
+            this.btnthemmoi.Location = new System.Drawing.Point(33, 299);
             this.btnthemmoi.Name = "btnthemmoi";
             this.btnthemmoi.Size = new System.Drawing.Size(107, 36);
             this.btnthemmoi.TabIndex = 15;
@@ -211,6 +193,7 @@
             // comboxgioitinh
             // 
             this.comboxgioitinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboxgioitinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboxgioitinh.FormattingEnabled = true;
             this.comboxgioitinh.Items.AddRange(new object[] {
             "Nam",
@@ -446,7 +429,6 @@
         #endregion
 
         private System.Windows.Forms.Panel btnsua;
-        private System.Windows.Forms.Button btnthoat;
         private System.Windows.Forms.Button btnxoa;
         private System.Windows.Forms.Button btnluu;
         private System.Windows.Forms.Button btnthemmoi;

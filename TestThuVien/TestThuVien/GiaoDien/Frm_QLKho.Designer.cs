@@ -140,7 +140,7 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "SoLuongTrongKho";
+            this.Column2.DataPropertyName = "kho";
             this.Column2.HeaderText = "Số Lượng Gốc";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -148,7 +148,7 @@
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "SoLuongMuon";
+            this.Column3.DataPropertyName = "SLM";
             this.Column3.HeaderText = "Số Lượng Mượn ";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;

@@ -157,8 +157,7 @@ namespace TestThuVien.GiaoDien
             SqlParameter para7 = new SqlParameter("@hinh", linkanh);
             SqlParameter para8 = new SqlParameter("@soluong", txt_SoLuong.Text);
             kn.sqlThucThi("suathongtinsach", para1, para2, para3, para4, para5, para6, para7, para8);
-            HienThi("");
-            
+            HienThi(""); 
         }
 
         private void btnxoa_Click_1(object sender, EventArgs e)
@@ -205,8 +204,8 @@ namespace TestThuVien.GiaoDien
                 pictureBox3.BackgroundImage = Image.FromFile(dataGridView_Sach.Rows[e.RowIndex].Cells[7].Value.ToString());
                 pictureBox3.Show();
                 linkanh = dataGridView_Sach.Rows[e.RowIndex].Cells[7].Value.ToString();
-                btnthemmoi.Enabled = false;
                 MoDieuKien();
+                  btnthemmoi.Enabled = true;
                 btnluu.Enabled = false;
                 /*-----------------------------------------------------*/
             }
@@ -341,6 +340,11 @@ namespace TestThuVien.GiaoDien
              SetNull();
             KhoaDieuKien();
             HienThi("");
+
+        }
+
+        private void dataGridView_Sach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
