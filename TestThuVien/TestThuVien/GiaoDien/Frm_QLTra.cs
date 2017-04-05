@@ -19,9 +19,12 @@ namespace TestThuVien.GiaoDien
             InitializeComponent();
         }
         BUSS_TraSach bus = new BUSS_TraSach();
+        KetNoiDT kn = new KetNoiDT();
         private void Frm_QLTra_Load(object sender, EventArgs e)
         {
             txt_MaHV.Text = "MHV";
+            txt_TenHV.Enabled = false;
+            txt_TenSach.Enabled = false;
             HienThi("");
         }
         void HienThi(string where)
@@ -45,6 +48,13 @@ namespace TestThuVien.GiaoDien
             {
                 MessageBox.Show(EX.Message);
             }
+        }
+
+        private void but_Tim_Click(object sender, EventArgs e)
+        {
+            SqlParameter para1 = new SqlParameter("@mahoivien", txt_MaHV.Text);
+            DataTable dulieu = kn.sqlLayDuLieu("sp_QLTraSach_KiemTra", para1);
+            dataGridView_QLTraSach.DataSource = dulieu;  
         }
     }
 }

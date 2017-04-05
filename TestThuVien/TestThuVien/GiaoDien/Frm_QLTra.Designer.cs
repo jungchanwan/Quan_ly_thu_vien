@@ -151,6 +151,7 @@
             this.but_Tim.TabIndex = 26;
             this.but_Tim.Text = "Tìm";
             this.but_Tim.UseVisualStyleBackColor = false;
+            this.but_Tim.Click += new System.EventHandler(this.but_Tim_Click);
             // 
             // label3
             // 
@@ -192,9 +193,9 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(410, 233);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 19);
+            this.label6.Size = new System.Drawing.Size(73, 19);
             this.label6.TabIndex = 31;
-            this.label6.Text = "Ngày Hiện Tại :";
+            this.label6.Text = "Ngày Trả :";
             // 
             // but_TraSach
             // 
