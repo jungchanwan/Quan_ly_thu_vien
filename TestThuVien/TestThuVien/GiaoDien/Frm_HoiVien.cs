@@ -138,14 +138,6 @@ namespace TestThuVien.GiaoDien
                     SqlParameter para7 = new SqlParameter("@email", txtemail.Text);
                     dt.sqlThucThi("sp_HoiVienInsert", para1, para2, para3, para4, para5, para6, para7);
                     HienThi("");
-                    //ec.Mahoivien = txtmahoivien.Text;
-                    //ec.Gioitinh = comboxgioitinh.Text;
-                    //ec.Diachi = txtdiachi.Text;
-                    //ec.Ho = txtho.Text;
-                    //ec.Ten = txtten.Text;
-                    //ec.Sodt = txtsodienthoai.Text;
-                    //ec.Email = txtemail.Text;
-                    //bus.ThemDuLieu(ec);
                     MessageBox.Show("Đã thêm dữ liệu thành công");
                 }
                 catch
@@ -167,14 +159,6 @@ namespace TestThuVien.GiaoDien
                     SqlParameter para7 = new SqlParameter("@email", txtemail.Text);
                     dt.sqlThucThi("sp_SuaHoiVien", para1, para2, para3, para4, para5, para6, para7);
                     HienThi("");
-                    //ec.Mahoivien = txtmahoivien.Text;
-                    //ec.Gioitinh = comboxgioitinh.Text;
-                    //ec.Diachi = txtdiachi.Text;
-                    //ec.Ho = txtho.Text;
-                    //ec.Ten = txtten.Text;
-                    //ec.Sodt = txtsodienthoai.Text;
-                    //ec.Email = txtemail.Text;
-                    //bus.SuaDuLieu(ec);
                     MessageBox.Show("Đã sửa dữ liệu thành công");
                  
                 }

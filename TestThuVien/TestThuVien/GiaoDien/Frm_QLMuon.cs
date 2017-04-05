@@ -52,6 +52,7 @@ namespace TestThuVien.GiaoDien
         private void Frm_QLMuon_Load(object sender, EventArgs e)
         {
             txt_MaSach.Text = "MS";
+            txt_MaHoiVien.Text = "MHV";
             khoadieukhien();
             HienThi("");
         }
@@ -79,6 +80,10 @@ namespace TestThuVien.GiaoDien
                 butluu.Enabled = false;
                 but_Xoa.Enabled = true;
                 but_Sua.Enabled = true;
+                txt_MaSach.Enabled = false;
+                txt_MaHoiVien.Enabled = false;
+                txt_TenHoiVien.Enabled = false;
+
             }
             catch (Exception EX)
             {
@@ -98,7 +103,18 @@ namespace TestThuVien.GiaoDien
                 SqlParameter prr = new SqlParameter("@masach", txt_MaSach.Text);
                 DataTable showsls = dt.sqlLayDuLieu("sp_SachConLai", prr);
                 MessageBox.Show("Số lượng sách còn lại trong kho :" + showsls.Rows[0][1].ToString());
-                modieukhien();
+                if (Convert.ToInt32(showsls.Rows[0][1].ToString()) == 0)
+                {
+                    MessageBox.Show("Sách này đã hết hãy tìm sách khác.");
+                    txt_MaSach.Clear();
+                    txt_MaSach.Text = "MS";
+                    txt_TenSach.Clear();
+                }
+                else
+                {
+                    modieukhien();
+                    txt_TenHoiVien.Enabled = false;
+                }
             }
         }
 
@@ -123,7 +139,86 @@ namespace TestThuVien.GiaoDien
 
         private void butluu_Click(object sender, EventArgs e)
         {
-            
+            if (txt_MaHoiVien.Text == "" || txt_SoLuong.Text == "" || txt_NgayMuon.Text == "" || txt_NgayHenTra.Text == "")
+            {
+                MessageBox.Show("Chưa nhập đủ thông tin");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    SqlParameter para1 = new SqlParameter("@masach", txt_MaSach.Text);
+                    SqlParameter para2 = new SqlParameter("@mahoivien", txt_MaHoiVien.Text);
+                    SqlParameter para3 = new SqlParameter("@soluongmuon", txt_SoLuong.Text);
+                    SqlParameter para4 = new SqlParameter("@ngaymuon", Convert.ToDateTime(txt_NgayMuon.Text));
+                    SqlParameter para5 = new SqlParameter("@ngaytra", Convert.ToDateTime(txt_NgayHenTra.Text));
+                    dt.sqlThucThi("themnguoimuonsach", para1, para2, para3, para4, para5);
+                    HienThi("");
+                    MessageBox.Show("Đã thêm dữ liệu thành công");
+                }
+                catch
+                {
+                    MessageBox.Show("lỗi");
+                    return;
+                }
+            }
+        }
+
+        private void txt_MaHoiVien_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    SqlParameter para7 = new SqlParameter("@mahv", txt_MaHoiVien.Text);
+                    DataTable dulieu = dt.sqlLayDuLieu("LaytenHV", para7);
+                    txt_TenHoiVien.Text = dulieu.Rows[dulieu.Rows.Count - 1]["hoten"].ToString();
+                }
+                catch
+                {
+                    MessageBox.Show("Mã HV Không Tồn Tại");
+                }
+            }
+        }
+
+        private void but_Sua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlParameter para1 = new SqlParameter("@masach", txt_MaSach.Text);
+                SqlParameter para2 = new SqlParameter("@mahv", txt_MaHoiVien.Text);
+                SqlParameter para3 = new SqlParameter("@soluongmuon", txt_SoLuong.Text);
+                SqlParameter para4 = new SqlParameter("@ngaymuon", Convert.ToDateTime(txt_NgayMuon.Text));
+                SqlParameter para5 = new SqlParameter("@ngayhentra", Convert.ToDateTime(txt_NgayHenTra.Text));
+                dt.sqlThucThi("Sua_QLMS", para1, para2, para3, para4, para5);
+                HienThi("");
+                MessageBox.Show("Sữa Thành Công");
+            }
+            catch
+            {
+                MessageBox.Show("Không lưu được.");
+                return;
+            }
+        }
+
+        private void but_Xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlParameter para1 = new SqlParameter("@masach", txt_MaSach.Text);
+                SqlParameter para2 = new SqlParameter("@mahv", txt_MaHoiVien.Text);
+                dt.sqlThucThi("Xoa_QLMS", para1, para2);
+                HienThi("");
+                MessageBox.Show("Xóa thành công");
+            }
+            catch
+            {
+                MessageBox.Show("Không xóa được.");
+                return;
+            }
+
         }
     }
 }

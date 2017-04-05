@@ -194,6 +194,7 @@
             this.but_Sua.TabIndex = 28;
             this.but_Sua.Text = "Sửa";
             this.but_Sua.UseVisualStyleBackColor = false;
+            this.but_Sua.Click += new System.EventHandler(this.but_Sua_Click);
             // 
             // but_Xoa
             // 
@@ -210,6 +211,7 @@
             this.but_Xoa.TabIndex = 27;
             this.but_Xoa.Text = "Xóa";
             this.but_Xoa.UseVisualStyleBackColor = false;
+            this.but_Xoa.Click += new System.EventHandler(this.but_Xoa_Click);
             // 
             // butluu
             // 
@@ -357,6 +359,7 @@
             this.txt_MaHoiVien.Name = "txt_MaHoiVien";
             this.txt_MaHoiVien.Size = new System.Drawing.Size(200, 26);
             this.txt_MaHoiVien.TabIndex = 48;
+            this.txt_MaHoiVien.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MaHoiVien_KeyDown);
             // 
             // txt_TenHoiVien
             // 
