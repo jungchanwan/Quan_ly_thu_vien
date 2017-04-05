@@ -21,6 +21,7 @@ namespace TestThuVien.GiaoDien
         BUSS_TraSach bus = new BUSS_TraSach();
         private void Frm_QLTra_Load(object sender, EventArgs e)
         {
+            txt_MaHV.Text = "MHV";
             HienThi("");
         }
         void HienThi(string where)

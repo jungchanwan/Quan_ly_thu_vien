@@ -32,7 +32,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_TenHV = new System.Windows.Forms.TextBox();
+            this.txt_MaHV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_TenSach = new System.Windows.Forms.TextBox();
             this.but_Tim = new System.Windows.Forms.Button();
@@ -56,6 +56,8 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_TenHV = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_QLTraSach)).BeginInit();
@@ -101,18 +103,18 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(32, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 19);
+            this.label2.Size = new System.Drawing.Size(94, 19);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Tên Hội Viên :";
+            this.label2.Text = "Mã Hội Viên :";
             // 
-            // txt_TenHV
+            // txt_MaHV
             // 
-            this.txt_TenHV.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_TenHV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_TenHV.Location = new System.Drawing.Point(144, 121);
-            this.txt_TenHV.Name = "txt_TenHV";
-            this.txt_TenHV.Size = new System.Drawing.Size(219, 26);
-            this.txt_TenHV.TabIndex = 16;
+            this.txt_MaHV.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_MaHV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaHV.Location = new System.Drawing.Point(144, 121);
+            this.txt_MaHV.Name = "txt_MaHV";
+            this.txt_MaHV.Size = new System.Drawing.Size(219, 26);
+            this.txt_MaHV.TabIndex = 16;
             // 
             // label1
             // 
@@ -203,7 +205,7 @@
             this.but_TraSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.but_TraSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.but_TraSach.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.but_TraSach.Location = new System.Drawing.Point(247, 289);
+            this.but_TraSach.Location = new System.Drawing.Point(247, 312);
             this.but_TraSach.Name = "but_TraSach";
             this.but_TraSach.Size = new System.Drawing.Size(118, 27);
             this.but_TraSach.TabIndex = 34;
@@ -219,7 +221,7 @@
             this.but_ThoiHan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.but_ThoiHan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.but_ThoiHan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.but_ThoiHan.Location = new System.Drawing.Point(390, 288);
+            this.but_ThoiHan.Location = new System.Drawing.Point(390, 311);
             this.but_ThoiHan.Name = "but_ThoiHan";
             this.but_ThoiHan.Size = new System.Drawing.Size(154, 27);
             this.but_ThoiHan.TabIndex = 35;
@@ -235,7 +237,7 @@
             this.but_BienBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.but_BienBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.but_BienBan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.but_BienBan.Location = new System.Drawing.Point(568, 288);
+            this.but_BienBan.Location = new System.Drawing.Point(568, 311);
             this.but_BienBan.Name = "but_BienBan";
             this.but_BienBan.Size = new System.Drawing.Size(80, 27);
             this.but_BienBan.TabIndex = 36;
@@ -247,7 +249,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(32, 256);
+            this.label7.Location = new System.Drawing.Point(32, 278);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 19);
             this.label7.TabIndex = 38;
@@ -257,7 +259,7 @@
             // 
             this.txt_SoLuong.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_SoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_SoLuong.Location = new System.Drawing.Point(144, 252);
+            this.txt_SoLuong.Location = new System.Drawing.Point(144, 274);
             this.txt_SoLuong.Name = "txt_SoLuong";
             this.txt_SoLuong.Size = new System.Drawing.Size(49, 26);
             this.txt_SoLuong.TabIndex = 39;
@@ -305,12 +307,12 @@
             this.Column5,
             this.Column6});
             this.dataGridView_QLTraSach.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView_QLTraSach.Location = new System.Drawing.Point(-1, 322);
+            this.dataGridView_QLTraSach.Location = new System.Drawing.Point(-1, 353);
             this.dataGridView_QLTraSach.Name = "dataGridView_QLTraSach";
             this.dataGridView_QLTraSach.ReadOnly = true;
             this.dataGridView_QLTraSach.RowHeadersVisible = false;
             this.dataGridView_QLTraSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_QLTraSach.Size = new System.Drawing.Size(787, 203);
+            this.dataGridView_QLTraSach.Size = new System.Drawing.Size(787, 172);
             this.dataGridView_QLTraSach.TabIndex = 43;
             this.dataGridView_QLTraSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_QLTraSach_CellClick);
             // 
@@ -370,12 +372,34 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label9.Location = new System.Drawing.Point(32, 246);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 19);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Tên Hội Viên :";
+            // 
+            // txt_TenHV
+            // 
+            this.txt_TenHV.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_TenHV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_TenHV.Location = new System.Drawing.Point(144, 239);
+            this.txt_TenHV.Name = "txt_TenHV";
+            this.txt_TenHV.Size = new System.Drawing.Size(219, 26);
+            this.txt_TenHV.TabIndex = 45;
+            // 
             // Frm_QLTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(786, 525);
+            this.Controls.Add(this.txt_TenHV);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView_QLTraSach);
             this.Controls.Add(this.txt_NgayHienTai);
             this.Controls.Add(this.txt_NgayHenTra);
@@ -392,7 +416,7 @@
             this.Controls.Add(this.but_Tim);
             this.Controls.Add(this.txt_TenSach);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_TenHV);
+            this.Controls.Add(this.txt_MaHV);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -415,7 +439,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_TenHV;
+        private System.Windows.Forms.TextBox txt_MaHV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_TenSach;
         private System.Windows.Forms.Button but_Tim;
@@ -439,5 +463,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_TenHV;
     }
 }
