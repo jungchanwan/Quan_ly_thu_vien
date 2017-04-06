@@ -27,5 +27,13 @@ namespace TestThuVien.GiaoDien
         {
             dataGridView_ThongKe.DataSource = bus.LayDuLieu(where);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn có muốn thoát ","Thông Báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning)==DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

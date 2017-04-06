@@ -24,7 +24,7 @@ namespace TestThuVien.QLThuVienDTO
         }
         public DataTable LayDuLieu(string DieuKien)
         {
-            return cn.GetDataTable("dbo.quanglysachra" + DieuKien);
+            return cn.GetDataTable("dbo.laythongtinmuonsach" + DieuKien);
         }
         public DataTable LayThongTinHoiVien(string DieuKien)
         {

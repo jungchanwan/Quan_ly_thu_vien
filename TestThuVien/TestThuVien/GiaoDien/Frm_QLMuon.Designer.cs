@@ -57,6 +57,7 @@
             this.txt_MaHoiVien = new System.Windows.Forms.TextBox();
             this.txt_TenHoiVien = new System.Windows.Forms.TextBox();
             this.but_kiemtratinhtrang = new System.Windows.Forms.Button();
+            this.but_Them = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_QLMuonSach)).BeginInit();
@@ -387,12 +388,30 @@
             this.but_kiemtratinhtrang.UseVisualStyleBackColor = false;
             this.but_kiemtratinhtrang.Click += new System.EventHandler(this.but_kiemtratinhtrang_Click);
             // 
+            // but_Them
+            // 
+            this.but_Them.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.but_Them.BackColor = System.Drawing.Color.DodgerBlue;
+            this.but_Them.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.but_Them.FlatAppearance.BorderSize = 0;
+            this.but_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_Them.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.but_Them.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.but_Them.Location = new System.Drawing.Point(16, 286);
+            this.but_Them.Name = "but_Them";
+            this.but_Them.Size = new System.Drawing.Size(73, 35);
+            this.but_Them.TabIndex = 51;
+            this.but_Them.Text = "Thêm";
+            this.but_Them.UseVisualStyleBackColor = false;
+            this.but_Them.Click += new System.EventHandler(this.but_Them_Click);
+            // 
             // Frm_QLMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(786, 567);
+            this.Controls.Add(this.but_Them);
             this.Controls.Add(this.but_kiemtratinhtrang);
             this.Controls.Add(this.txt_TenHoiVien);
             this.Controls.Add(this.txt_TenSach);
@@ -458,5 +477,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Button but_kiemtratinhtrang;
+        private System.Windows.Forms.Button but_Them;
     }
 }

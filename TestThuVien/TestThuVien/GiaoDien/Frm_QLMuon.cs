@@ -34,6 +34,7 @@ namespace TestThuVien.GiaoDien
             butluu.Enabled = false;
             but_Xoa.Enabled = false;
             but_Sua.Enabled = false;
+            but_Them.Enabled = false;
         }
         void modieukhien()
         {
@@ -48,6 +49,7 @@ namespace TestThuVien.GiaoDien
             butluu.Enabled = true;
             but_Xoa.Enabled = false;
             but_Sua.Enabled = false;
+            but_Them.Enabled = true;
         }
         private void Frm_QLMuon_Load(object sender, EventArgs e)
         {
@@ -219,6 +221,22 @@ namespace TestThuVien.GiaoDien
                 return;
             }
 
+        }
+
+        private void but_Them_Click(object sender, EventArgs e)
+        {
+            txt_MaSach.Enabled = true;
+            txt_MaSach.Clear();
+            txt_MaHoiVien.Clear();
+            txt_NgayHenTra.Clear();
+            txt_NgayMuon.Clear();
+            txt_SoLuong.Clear();
+            txt_TenHoiVien.Clear();
+            txt_TenSach.Clear();
+            txt_TenSach.Clear();
+            khoadieukhien();
+            txt_MaHoiVien.Text = "MHV";
+            txt_MaSach.Text = "MS";
         }
     }
 }

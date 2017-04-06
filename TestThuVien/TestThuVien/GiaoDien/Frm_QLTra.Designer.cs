@@ -42,22 +42,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.but_TraSach = new System.Windows.Forms.Button();
             this.but_ThoiHan = new System.Windows.Forms.Button();
-            this.but_BienBan = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_SoLuong = new System.Windows.Forms.TextBox();
             this.txt_NgayMuon = new System.Windows.Forms.TextBox();
             this.txt_NgayHenTra = new System.Windows.Forms.TextBox();
             this.txt_NgayHienTai = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_TenHV = new System.Windows.Forms.TextBox();
             this.dataGridView_QLTraSach = new System.Windows.Forms.DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_TenHV = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_QLTraSach)).BeginInit();
@@ -121,7 +120,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(32, 203);
+            this.label1.Location = new System.Drawing.Point(32, 213);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 19);
             this.label1.TabIndex = 17;
@@ -131,9 +130,10 @@
             // 
             this.txt_TenSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_TenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_TenSach.Location = new System.Drawing.Point(144, 201);
+            this.txt_TenSach.Location = new System.Drawing.Point(144, 194);
+            this.txt_TenSach.Multiline = true;
             this.txt_TenSach.Name = "txt_TenSach";
-            this.txt_TenSach.Size = new System.Drawing.Size(219, 26);
+            this.txt_TenSach.Size = new System.Drawing.Size(219, 51);
             this.txt_TenSach.TabIndex = 18;
             // 
             // but_Tim
@@ -145,7 +145,7 @@
             this.but_Tim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.but_Tim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.but_Tim.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.but_Tim.Location = new System.Drawing.Point(214, 166);
+            this.but_Tim.Location = new System.Drawing.Point(214, 161);
             this.but_Tim.Name = "but_Tim";
             this.but_Tim.Size = new System.Drawing.Size(68, 27);
             this.but_Tim.TabIndex = 26;
@@ -157,10 +157,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(243, 147);
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(243, 145);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 19);
+            this.label3.Size = new System.Drawing.Size(11, 16);
             this.label3.TabIndex = 27;
             this.label3.Text = "|";
             // 
@@ -169,7 +169,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(410, 121);
+            this.label4.Location = new System.Drawing.Point(411, 170);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 19);
             this.label4.TabIndex = 28;
@@ -180,7 +180,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(410, 177);
+            this.label5.Location = new System.Drawing.Point(411, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 19);
             this.label5.TabIndex = 29;
@@ -191,7 +191,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(410, 233);
+            this.label6.Location = new System.Drawing.Point(411, 262);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 19);
             this.label6.TabIndex = 31;
@@ -229,28 +229,12 @@
             this.but_ThoiHan.Text = "Kiểm Tra Thời Hạn";
             this.but_ThoiHan.UseVisualStyleBackColor = false;
             // 
-            // but_BienBan
-            // 
-            this.but_BienBan.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.but_BienBan.BackColor = System.Drawing.Color.DodgerBlue;
-            this.but_BienBan.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.but_BienBan.FlatAppearance.BorderSize = 0;
-            this.but_BienBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.but_BienBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.but_BienBan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.but_BienBan.Location = new System.Drawing.Point(568, 311);
-            this.but_BienBan.Name = "but_BienBan";
-            this.but_BienBan.Size = new System.Drawing.Size(80, 27);
-            this.but_BienBan.TabIndex = 36;
-            this.but_BienBan.Text = "Biên Bản";
-            this.but_BienBan.UseVisualStyleBackColor = false;
-            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(32, 278);
+            this.label7.Location = new System.Drawing.Point(411, 125);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 19);
             this.label7.TabIndex = 38;
@@ -259,17 +243,17 @@
             // txt_SoLuong
             // 
             this.txt_SoLuong.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_SoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_SoLuong.Location = new System.Drawing.Point(144, 274);
+            this.txt_SoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_SoLuong.Location = new System.Drawing.Point(523, 121);
             this.txt_SoLuong.Name = "txt_SoLuong";
-            this.txt_SoLuong.Size = new System.Drawing.Size(49, 26);
+            this.txt_SoLuong.Size = new System.Drawing.Size(49, 24);
             this.txt_SoLuong.TabIndex = 39;
             // 
             // txt_NgayMuon
             // 
             this.txt_NgayMuon.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_NgayMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_NgayMuon.Location = new System.Drawing.Point(526, 118);
+            this.txt_NgayMuon.Location = new System.Drawing.Point(523, 166);
             this.txt_NgayMuon.Name = "txt_NgayMuon";
             this.txt_NgayMuon.Size = new System.Drawing.Size(219, 26);
             this.txt_NgayMuon.TabIndex = 40;
@@ -278,7 +262,7 @@
             // 
             this.txt_NgayHenTra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_NgayHenTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_NgayHenTra.Location = new System.Drawing.Point(526, 173);
+            this.txt_NgayHenTra.Location = new System.Drawing.Point(523, 213);
             this.txt_NgayHenTra.Name = "txt_NgayHenTra";
             this.txt_NgayHenTra.Size = new System.Drawing.Size(219, 26);
             this.txt_NgayHenTra.TabIndex = 41;
@@ -287,10 +271,30 @@
             // 
             this.txt_NgayHienTai.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_NgayHienTai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_NgayHienTai.Location = new System.Drawing.Point(526, 229);
+            this.txt_NgayHienTai.Location = new System.Drawing.Point(523, 258);
             this.txt_NgayHienTai.Name = "txt_NgayHienTai";
             this.txt_NgayHienTai.Size = new System.Drawing.Size(219, 26);
             this.txt_NgayHienTai.TabIndex = 42;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label9.Location = new System.Drawing.Point(32, 263);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 19);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Tên Hội Viên :";
+            // 
+            // txt_TenHV
+            // 
+            this.txt_TenHV.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_TenHV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_TenHV.Location = new System.Drawing.Point(144, 258);
+            this.txt_TenHV.Name = "txt_TenHV";
+            this.txt_TenHV.Size = new System.Drawing.Size(219, 26);
+            this.txt_TenHV.TabIndex = 45;
             // 
             // dataGridView_QLTraSach
             // 
@@ -302,9 +306,9 @@
             this.dataGridView_QLTraSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column7,
             this.Column1,
+            this.Column3,
             this.Column2,
             this.Column4,
-            this.Column3,
             this.Column5,
             this.Column6});
             this.dataGridView_QLTraSach.GridColor = System.Drawing.SystemColors.ControlLightLight;
@@ -333,6 +337,14 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "MaSach";
+            this.Column3.HeaderText = "Mã Sách";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -348,14 +360,6 @@
             this.Column4.HeaderText = "Số Lượng Mượn";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "SoLuongTra";
-            this.Column3.HeaderText = "Số Lượng Trả";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             // 
             // Column5
             // 
@@ -373,26 +377,6 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.Location = new System.Drawing.Point(32, 246);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(96, 19);
-            this.label9.TabIndex = 44;
-            this.label9.Text = "Tên Hội Viên :";
-            // 
-            // txt_TenHV
-            // 
-            this.txt_TenHV.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_TenHV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_TenHV.Location = new System.Drawing.Point(144, 239);
-            this.txt_TenHV.Name = "txt_TenHV";
-            this.txt_TenHV.Size = new System.Drawing.Size(219, 26);
-            this.txt_TenHV.TabIndex = 45;
-            // 
             // Frm_QLTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,7 +391,6 @@
             this.Controls.Add(this.txt_NgayMuon);
             this.Controls.Add(this.txt_SoLuong);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.but_BienBan);
             this.Controls.Add(this.but_ThoiHan);
             this.Controls.Add(this.but_TraSach);
             this.Controls.Add(this.label6);
@@ -450,21 +433,20 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button but_TraSach;
         private System.Windows.Forms.Button but_ThoiHan;
-        private System.Windows.Forms.Button but_BienBan;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_SoLuong;
         private System.Windows.Forms.TextBox txt_NgayMuon;
         private System.Windows.Forms.TextBox txt_NgayHenTra;
         private System.Windows.Forms.TextBox txt_NgayHienTai;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_TenHV;
         private System.Windows.Forms.DataGridView dataGridView_QLTraSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_TenHV;
     }
 }
